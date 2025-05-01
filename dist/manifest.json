@@ -2,19 +2,27 @@
   "manifest_version": 3,
   "name": "K线军师",
   "version": "1.0.0",
-  "description": "专业的加密货币技术分析助手",
+  "description": "专业的加密货币技术分析工具",
   "permissions": [
+    "activeTab",
     "storage",
-    "activeTab"
+    "tabs"
   ],
   "host_permissions": [
     "https://www.kxianjunshi.com/*",
     "https://*.binance.com/*",
     "https://*.okx.com/*",
-    "https://*.gate.io/*"
+    "https://*.gate.io/*",
+    "https://*.kucoin.com/*",
+    "https://*.huobi.com/*",
+    "https://*.bybit.com/*",
+    "https://*.mexc.com/*",
+    "https://*.bitget.com/*",
+    "https://*.bitfinex.com/*",
+    "https://*.kraken.com/*"
   ],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "index.html",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
@@ -31,12 +39,42 @@
       "matches": [
         "https://*.binance.com/*",
         "https://*.okx.com/*",
-        "https://*.gate.io/*"
+        "https://*.gate.io/*",
+        "https://*.kucoin.com/*",
+        "https://*.huobi.com/*",
+        "https://*.bybit.com/*",
+        "https://*.mexc.com/*",
+        "https://*.bitget.com/*",
+        "https://*.bitfinex.com/*",
+        "https://*.kraken.com/*"
       ],
-      "js": ["content.js"]
+      "js": ["assets/content.js"],
+      "css": ["assets/main.css"]
     }
   ],
   "background": {
-    "service_worker": "background.js"
-  }
+    "service_worker": "assets/background.js"
+  },
+  "web_accessible_resources": [{
+    "resources": [
+      "assets/*",
+      "icons/*"
+    ],
+    "matches": [
+      "https://*.binance.com/*",
+      "https://*.okx.com/*",
+      "https://*.gate.io/*",
+      "https://*.kucoin.com/*",
+      "https://*.huobi.com/*",
+      "https://*.bybit.com/*",
+      "https://*.mexc.com/*",
+      "https://*.bitget.com/*",
+      "https://*.bitfinex.com/*",
+      "https://*.kraken.com/*"
+    ]
+  }],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://www.kxianjunshi.com;"
+  },
+  "update_url": "https://www.kxianjunshi.com/extension/updates.xml"
 }

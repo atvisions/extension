@@ -1,0 +1,11 @@
+{
+  "name": "kxianjunshi-extension",
+  "version": "1.0.0",
+  "description": "专业的加密货币技术分析助手",
+  "scripts": {
+    "build": "./build.sh",
+    "version": "npm version patch && git add . && git commit -m 'Bump version' && git push"
+  },
+  "author": "",
+  "license": "ISC"
+} 
