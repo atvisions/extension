@@ -2,24 +2,14 @@
   "manifest_version": 3,
   "name": "K线军师",
   "version": "1.0.0",
-  "description": "专业的加密货币技术分析工具",
+  "description": "在加密货币交易所页面提供实时的技术指标分析和交易建议",
   "permissions": [
     "activeTab",
     "storage",
     "tabs"
   ],
   "host_permissions": [
-    "https://www.kxianjunshi.com/*",
-    "https://*.binance.com/*",
-    "https://*.okx.com/*",
-    "https://*.gate.io/*",
-    "https://*.kucoin.com/*",
-    "https://*.huobi.com/*",
-    "https://*.bybit.com/*",
-    "https://*.mexc.com/*",
-    "https://*.bitget.com/*",
-    "https://*.bitfinex.com/*",
-    "https://*.kraken.com/*"
+    "https://www.kxianjunshi.com/*"
   ],
   "action": {
     "default_popup": "index.html",
@@ -46,7 +36,18 @@
         "https://*.mexc.com/*",
         "https://*.bitget.com/*",
         "https://*.bitfinex.com/*",
-        "https://*.kraken.com/*"
+        "https://*.kraken.com/*",
+        "https://*.htx.com/*",
+        "https://*.bitmart.com/*",
+        "https://*.coinbase.com/*",
+        "https://*.bitstamp.net/*",
+        "https://*.poloniex.com/*",
+        "https://*.bithumb.com/*",
+        "https://*.upbit.com/*",
+        "https://*.bitflyer.com/*",
+        "https://*.gemini.com/*",
+        "https://*.lbank.com/*",
+        "https://*.phemex.com/*"
       ],
       "js": ["assets/content.js"],
       "css": ["assets/main.css"]
@@ -70,11 +71,21 @@
       "https://*.mexc.com/*",
       "https://*.bitget.com/*",
       "https://*.bitfinex.com/*",
-      "https://*.kraken.com/*"
+      "https://*.kraken.com/*",
+      "https://*.htx.com/*",
+      "https://*.bitmart.com/*",
+      "https://*.coinbase.com/*",
+      "https://*.bitstamp.net/*",
+      "https://*.poloniex.com/*",
+      "https://*.bithumb.com/*",
+      "https://*.upbit.com/*",
+      "https://*.bitflyer.com/*",
+      "https://*.gemini.com/*",
+      "https://*.lbank.com/*",
+      "https://*.phemex.com/*"
     ]
   }],
   "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://www.kxianjunshi.com;"
-  },
-  "update_url": "https://www.kxianjunshi.com/extension/updates.xml"
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://www.kxianjunshi.com https://www.kxianjunshi.com/api https://api.coze.com; img-src 'self' https://readdy.ai data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com;"
+  }
 }
